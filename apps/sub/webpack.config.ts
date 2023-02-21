@@ -15,9 +15,6 @@ module.exports = {
         }),
         new HTMLWebpackPlugin()
     ],
-    optimization: {
-        minimize: false
-    },
     devServer: {
       port: 8081
     },
