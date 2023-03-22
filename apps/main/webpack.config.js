@@ -9,6 +9,9 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    optimization: {
+        minimize: false
+    },
     mode: 'production',
     plugins: [
         new ModuleFederationPlugin({
@@ -16,6 +19,7 @@ module.exports = {
             remotes: {
                 'sub': 'sub@http://localhost:8081/remoteEntrySub.js'
             },
+            shared: ['md5']
         }),
         new HTMLWebpackPlugin(),
     ],

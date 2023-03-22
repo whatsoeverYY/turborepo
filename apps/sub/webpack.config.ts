@@ -12,9 +12,13 @@ module.exports = {
                 './time': './src/utils/time.ts',
                 './date': './src/utils/date.ts'
             },
+            shared: ['md5']
         }),
         new HTMLWebpackPlugin()
     ],
+    optimization: {
+        minimize: false
+    },
     devServer: {
       port: 8081
     },
